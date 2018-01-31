@@ -1,0 +1,16 @@
+[
+{
+  "modid": "stapletonsores",
+  "name": "Stapleton\'s Ores",
+  "description": "Gregtech\'s ore system without the rest of Gregtech.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Stapleton"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
