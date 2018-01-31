@@ -18,7 +18,7 @@ compileJava {
 }
 
 version = major_version + '.' + minor_version + '.' + BUILD_NUMBER
-group = "com.stapleton.stapletonsores" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = "stapleton.stapletonsores" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "stapletonsores"
 
 minecraft {
