@@ -1,6 +1,5 @@
 package stapleton.stapletonsores.proxy;
 
-<<<<<<< HEAD
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -18,7 +17,4 @@ public class ClientProxy extends CommonProxy {
     public static void registerModels(ModelRegistryEvent event) {
 
     }
-=======
-public class ClientProxy {
->>>>>>> master
 }

@@ -1,6 +1,5 @@
 package stapleton.stapletonsores.proxy;
 
-<<<<<<< HEAD
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -52,7 +51,4 @@ public class CommonProxy {
         // Items
         event.getRegistry().register(new TestItem());
     }
-=======
-public class CommonProxy {
->>>>>>> master
 }
