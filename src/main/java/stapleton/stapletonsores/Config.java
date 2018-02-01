@@ -16,7 +16,7 @@ public class Config {
             config.load();
             initGeneralConfig(config);
         } catch (Exception exception) {
-        StapletonsOres.logger.log(Level.ERROR, "Unable to load config file!", exception);
+        StapletonsOres.LOG.log(Level.ERROR, "Unable to load config file!", exception);
         } finally {
             if (config.hasChanged()) {
                 config.save();
