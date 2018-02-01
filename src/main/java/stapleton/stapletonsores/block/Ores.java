@@ -5,7 +5,6 @@ import net.minecraft.block.material.Material;
 import net.minecraftforge.common.MinecraftForge;
 import org.apache.logging.log4j.Level;
 import stapleton.stapletonsores.StapletonsOres;
-import stapleton.stapletonsores.core.BlockCore;
 
 import java.util.HashMap;
 

@@ -1,4 +1,4 @@
-package stapleton.stapletonsores.core;
+package stapleton.stapletonsores.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
