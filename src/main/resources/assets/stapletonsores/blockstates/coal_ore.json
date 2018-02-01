@@ -1,0 +1,10 @@
+{
+"forge_marker": 1,
+"defaults": {
+"model": "stapletonsores:coal_ore"
+},
+"variants": {
+"normal": [{}],
+"inventory": [{}]
+}
+}

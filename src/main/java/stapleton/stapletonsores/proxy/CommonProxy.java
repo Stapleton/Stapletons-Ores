@@ -17,6 +17,7 @@ import stapleton.stapletonsores.block.Ores;
 
 import java.io.File;
 import java.util.Map;
+import java.util.Objects;
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
@@ -43,7 +44,7 @@ public class CommonProxy {
             //String name = entry.getKey();
             Block block = entry.getValue();
             event.getRegistry().register(block);
-            StapletonsOres.LOG.log(Level.INFO,"Registered Block: " + block.getRegistryName());
+            //StapletonsOres.LOG.log(Level.INFO,"Registered Block: " + block.getRegistryName());
         }
     }
 
@@ -54,9 +55,9 @@ public class CommonProxy {
         for (Map.Entry<String, Block> entry : Ores.OreList.entrySet()) {
             //String name = entry.getKey();
             Block block = entry.getValue();
-            Item item = new ItemBlock(block).setRegistryName(block.getRegistryName());
+            Item item = new ItemBlock(block).setRegistryName(Objects.requireNonNull(block.getRegistryName()));
             event.getRegistry().register(item);
-            StapletonsOres.LOG.log(Level.INFO, "Registered Item Block: " + item.getRegistryName());
+            //StapletonsOres.LOG.log(Level.INFO, "Registered Item Block: " + item.getRegistryName());
         }
 
         // Items
