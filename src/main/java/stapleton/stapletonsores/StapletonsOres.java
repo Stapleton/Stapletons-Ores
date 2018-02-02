@@ -6,7 +6,6 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Logger;
 import stapleton.stapletonsores.block.Ores;
 import stapleton.stapletonsores.proxy.CommonProxy;
@@ -22,14 +21,13 @@ public class StapletonsOres {
     @Mod.Instance
     public static StapletonsOres instance;
 
-    public static Logger LOG;
+    public static Logger logger;
 
     public static CreativeTabs Common;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        LOG = event.getModLog();
-        //LOG.log(Level.INFO, "I really dont think this is working...");
+        logger = event.getModLog();
         Ores.preInit();
 
         proxy.preInit(event);

@@ -23,7 +23,7 @@ public class Ores {
     private Ores() {}
 
     public static void preInit() {
-        StapletonsOres.LOG.log(Level.INFO, "Total: " + arrayOfOres.length);
+        StapletonsOres.logger.log(Level.INFO, "Total: " + arrayOfOres.length);
 
         for (String item : arrayOfOres) {
             OreList.put(item.toLowerCase() + "_ore", new BlockCore(item.toLowerCase() + "_ore", Material.ROCK));

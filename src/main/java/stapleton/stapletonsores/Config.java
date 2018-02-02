@@ -7,7 +7,7 @@ import stapleton.stapletonsores.proxy.CommonProxy;
 public class Config {
     private static final String GENERAL = "General";
 
-    public static int configVersion = Reference.CONFIG_VERSION;
+    public static int configVersion = 0;
     public static boolean isEnabled = true;
 
     public static void readConfig() {
@@ -16,7 +16,7 @@ public class Config {
             config.load();
             initGeneralConfig(config);
         } catch (Exception exception) {
-        StapletonsOres.LOG.log(Level.ERROR, "Unable to load config file!", exception);
+        StapletonsOres.logger.log(Level.ERROR, "Unable to load config file!", exception);
         } finally {
             if (config.hasChanged()) {
                 config.save();
@@ -26,7 +26,7 @@ public class Config {
 
     private static void initGeneralConfig(Configuration config) {
         config.addCustomCategoryComment(GENERAL, "General Configuration");
-        configVersion = config.getInt("Config Version", GENERAL, configVersion, Reference.CONFIG_VERSION, Reference.CONFIG_VERSION, "DO NOT CHANGE THIS!");
+        configVersion = config.getInt("Config Version", GENERAL, configVersion, configVersion, configVersion, "DO NOT CHANGE THIS!");
         isEnabled = config.getBoolean("Enabled?", GENERAL, isEnabled, "Enables/Disables the mod completely.");
     }
 }
