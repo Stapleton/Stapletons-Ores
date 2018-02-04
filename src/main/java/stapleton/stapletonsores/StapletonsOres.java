@@ -16,7 +16,7 @@ public class StapletonsOres {
 
     public static final String MOD_ID = "stapletonsores";
 
-    @SidedProxy(clientSide = "stapleton.stapletonsores.proxy.ClientProxy", serverSide = "stapleton.stapletonsores.proxy.ServerProxy")
+    @SidedProxy(clientSide = "stapleton.stapletonsores.proxy.ClientProxy", serverSide = "stapleton.stapletonsores.proxy.CommonProxy")
     public static CommonProxy proxy;
 
     @Mod.Instance
