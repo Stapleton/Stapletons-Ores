@@ -24,7 +24,7 @@ public class StapletonsOres {
 
     public static Logger logger;
 
-    public static CreativeTabs tabCommon = new SOTab(CreativeTabs.getNextID(), StapletonsOres.MOD_ID, "tabCommon", 0);
+    public static final CreativeTabs tabCommon = new SOTab(CreativeTabs.getNextID(), StapletonsOres.MOD_ID, "tabCommon", 0);
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
