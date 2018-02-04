@@ -1,6 +1,7 @@
 package stapleton.stapletonsores;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -23,7 +24,7 @@ public class StapletonsOres {
 
     public static Logger logger;
 
-    public static CreativeTabs Common;
+    public static CreativeTabs tabCommon = new SOTab(CreativeTabs.getNextID(), StapletonsOres.MOD_ID, "tabCommon", 0);
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
