@@ -11,7 +11,7 @@ import org.apache.logging.log4j.Logger;
 import stapleton.stapletonsores.block.Ores;
 import stapleton.stapletonsores.proxy.CommonProxy;
 
-@Mod(useMetadata = true, modid = StapletonsOres.MOD_ID, dependencies = "before:contenttweaker")
+@Mod(useMetadata = true, modid = StapletonsOres.MOD_ID)
 public class StapletonsOres {
 
     public static final String MOD_ID = "stapletonsores";
