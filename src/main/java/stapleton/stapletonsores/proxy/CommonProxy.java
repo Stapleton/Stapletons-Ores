@@ -11,20 +11,55 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.Level;
+import stapleton.stapletonsores.util.Config;
 import stapleton.stapletonsores.StapletonsOres;
 import stapleton.stapletonsores.block.Ores;
 
+import java.io.File;
 import java.util.Map;
 import java.util.Objects;
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
-    public static Configuration config;
 
     public void preInit(FMLPreInitializationEvent event) {
-        /*File directory = event.getModConfigurationDirectory();
-        config = new Configuration(new File(directory.getPath(), StapletonsOres.MOD_ID + ".cfg"));
-        Config.readConfig();*/
+        String directoryPath = event.getModConfigurationDirectory().getPath();
+
+        File modConfigDirectory = new File(directoryPath, "StapletonsOres");
+        File overworld = new File(modConfigDirectory, "Overworld");
+        File nether = new File(modConfigDirectory, "Nether");
+        File end = new File(modConfigDirectory, "End");
+
+        boolean ignoreThis = overworld.mkdir() && nether.mkdir() && end.mkdir();
+
+        File oldConfigFile = new File(directoryPath, StapletonsOres.MOD_ID + ".cfg");
+
+        if (oldConfigFile.exists()) {
+            Configuration oldConfig = new Configuration(oldConfigFile);
+            Config.isEnabled = oldConfig.getBoolean("Enabled?", Config.GENERAL, Config.isEnabled, "Enables/Disables the mod completely.");
+            StapletonsOres.logger.info("Removed old config: " + oldConfigFile.delete() + " | Saved old config value: 'Enabled?' = " + Config.isEnabled);
+        }
+
+        Config.generalConfig(new Configuration(new File(modConfigDirectory.getPath(), StapletonsOres.MOD_ID + ".cfg")));
+
+        for (String name : Ores.arrayOfOres) {
+            switch (name.substring(0, 2)) {
+                case "O_":
+                    name = name.replace("O_", "");
+                    Config.oreConfig(new Configuration(new File(overworld.getPath(), name + ".cfg")), name);
+                    break;
+
+                case "N_":
+                    name = name.replace("N_", "");
+                    Config.oreConfig(new Configuration(new File(nether.getPath(), name + ".cfg")), name);
+                    break;
+
+                case "E_":
+                    name = name.replace("E_", "");
+                    Config.oreConfig(new Configuration(new File(end.getPath(), name + ".cfg")), name);
+                    break;
+            }
+        }
     }
 
     public void init(FMLInitializationEvent event) {

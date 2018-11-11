@@ -1,4 +1,4 @@
-package stapleton.stapletonsores;
+package stapleton.stapletonsores.util;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;

@@ -1,7 +1,6 @@
 package stapleton.stapletonsores;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -10,6 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 import stapleton.stapletonsores.block.Ores;
 import stapleton.stapletonsores.proxy.CommonProxy;
+import stapleton.stapletonsores.util.SOTab;
 
 @Mod(useMetadata = true, modid = StapletonsOres.MOD_ID)
 public class StapletonsOres {
