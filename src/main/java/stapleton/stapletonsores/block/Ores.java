@@ -25,7 +25,8 @@ public class Ores {
         StapletonsOres.logger.log(Level.INFO, "Total: " + arrayOfOres.length);
 
         for (String item : arrayOfOres) {
-            OreList.put(item.toLowerCase() + "_ore", new BlockCore(item.toLowerCase() + "_ore", Material.ROCK));
+            BlockCore blockOre = new BlockCore(item.toLowerCase() + "_ore", Material.ROCK);
+            OreList.put(item.toLowerCase() + "_ore", blockOre);
         }
 
         MinecraftForge.EVENT_BUS.register(INSTANCE);

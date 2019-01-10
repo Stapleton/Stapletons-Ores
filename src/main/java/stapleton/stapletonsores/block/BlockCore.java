@@ -13,13 +13,10 @@ public class BlockCore extends Block {
 
     public BlockCore(String name, Material material) {
         super(material);
-        setHardness(3.0F);
-        setResistance(5.0F);
         setSoundType(SoundType.STONE);
         setCreativeTab(StapletonsOres.tabCommon);
         setUnlocalizedName(StapletonsOres.MOD_ID + "." + name);
         setRegistryName(name);
         blockName = name;
-
     }
 }

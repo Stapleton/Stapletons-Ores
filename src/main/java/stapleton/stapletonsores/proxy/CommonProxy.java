@@ -45,18 +45,18 @@ public class CommonProxy {
         for (String name : Ores.arrayOfOres) {
             switch (name.substring(0, 2)) {
                 case "O_":
-                    name = name.replace("O_", "");
-                    Config.oreConfig(new Configuration(new File(overworld.getPath(), name + ".cfg")), name);
+                    String strippedO = name.replace("O_", "");
+                    Config.oreConfig(new Configuration(new File(overworld.getPath(), strippedO + ".cfg")), strippedO, name);
                     break;
 
                 case "N_":
-                    name = name.replace("N_", "");
-                    Config.oreConfig(new Configuration(new File(nether.getPath(), name + ".cfg")), name);
+                    String strippedN = name.replace("N_", "");
+                    Config.oreConfig(new Configuration(new File(nether.getPath(), strippedN + ".cfg")), strippedN, name);
                     break;
 
                 case "E_":
-                    name = name.replace("E_", "");
-                    Config.oreConfig(new Configuration(new File(end.getPath(), name + ".cfg")), name);
+                    String strippedE = name.replace("E_", "");
+                    Config.oreConfig(new Configuration(new File(end.getPath(), strippedE + ".cfg")), strippedE, name);
                     break;
             }
         }
