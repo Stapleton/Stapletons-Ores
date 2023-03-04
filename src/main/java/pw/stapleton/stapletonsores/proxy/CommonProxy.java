@@ -1,4 +1,4 @@
-package stapleton.stapletonsores.proxy;
+package pw.stapleton.stapletonsores.proxy;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -11,9 +11,9 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.Level;
-import stapleton.stapletonsores.util.Config;
-import stapleton.stapletonsores.StapletonsOres;
-import stapleton.stapletonsores.block.Ores;
+import pw.stapleton.stapletonsores.util.Config;
+import pw.stapleton.stapletonsores.StapletonsOres;
+import pw.stapleton.stapletonsores.block.Ores;
 
 import java.io.File;
 import java.util.Map;

@@ -1,10 +1,10 @@
-package stapleton.stapletonsores.util;
+package pw.stapleton.stapletonsores.util;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import stapleton.stapletonsores.block.Ores;
+import pw.stapleton.stapletonsores.block.Ores;
 
 public class SOTab extends CreativeTabs {
 

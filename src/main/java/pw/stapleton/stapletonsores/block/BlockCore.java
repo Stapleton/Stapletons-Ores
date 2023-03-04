@@ -1,11 +1,11 @@
-package stapleton.stapletonsores.block;
+package pw.stapleton.stapletonsores.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
-import stapleton.stapletonsores.StapletonsOres;
+import pw.stapleton.stapletonsores.StapletonsOres;
 
 public class BlockCore extends Block {
 

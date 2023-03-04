@@ -1,4 +1,4 @@
-package stapleton.stapletonsores.block;
+package pw.stapleton.stapletonsores.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -9,7 +9,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.apache.logging.log4j.Level;
-import stapleton.stapletonsores.StapletonsOres;
+import pw.stapleton.stapletonsores.StapletonsOres;
 
 import java.util.HashMap;
 import java.util.Map;

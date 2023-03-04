@@ -1,9 +1,9 @@
-package stapleton.stapletonsores.util;
+package pw.stapleton.stapletonsores.util;
 
 import net.minecraftforge.common.config.Configuration;
 import org.apache.logging.log4j.Level;
-import stapleton.stapletonsores.StapletonsOres;
-import stapleton.stapletonsores.block.Ores;
+import pw.stapleton.stapletonsores.StapletonsOres;
+import pw.stapleton.stapletonsores.block.Ores;
 
 public class Config {
     public static final String GENERAL = "General";
